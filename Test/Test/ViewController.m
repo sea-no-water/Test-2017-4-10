@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     UIButton * btn = [[UIButton alloc] init];
-    btn.frame = CGRectMake(100, 100, 100, 100);
+    btn.frame = CGRectMake(100, 100, 200, 100);
     btn.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:btn];
     
