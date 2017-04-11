@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    UITextField * DLZHtf;
+    UITextField * DLMMtf;
 
+}
+
+@property (nonatomic, strong)NSString * zhnaghao;
+@property (nonatomic, strong)NSString * mima;
 
 @end
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		745695221E9B550C00A5AA02 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 745695211E9B550C00A5AA02 /* ViewController2.m */; };
+		745695231E9B550C00A5AA02 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 745695211E9B550C00A5AA02 /* ViewController2.m */; };
 		749DE5201E98D56300821AA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 749DE51F1E98D56300821AA9 /* main.m */; };
 		749DE5231E98D56300821AA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 749DE5221E98D56300821AA9 /* AppDelegate.m */; };
 		749DE5261E98D56300821AA9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749DE5251E98D56300821AA9 /* ViewController.m */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		745695201E9B550C00A5AA02 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		745695211E9B550C00A5AA02 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		749DE51B1E98D56200821AA9 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		749DE51F1E98D56300821AA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		749DE5211E98D56300821AA9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				749DE5221E98D56300821AA9 /* AppDelegate.m */,
 				749DE5241E98D56300821AA9 /* ViewController.h */,
 				749DE5251E98D56300821AA9 /* ViewController.m */,
+				745695201E9B550C00A5AA02 /* ViewController2.h */,
+				745695211E9B550C00A5AA02 /* ViewController2.m */,
 				749DE5271E98D56300821AA9 /* Main.storyboard */,
 				749DE52A1E98D56400821AA9 /* Assets.xcassets */,
 				749DE52C1E98D56400821AA9 /* LaunchScreen.storyboard */,
@@ -277,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				749DE5261E98D56300821AA9 /* ViewController.m in Sources */,
+				745695221E9B550C00A5AA02 /* ViewController2.m in Sources */,
 				749DE5231E98D56300821AA9 /* AppDelegate.m in Sources */,
 				749DE5201E98D56300821AA9 /* main.m in Sources */,
 			);
@@ -295,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				749DE5441E98D56500821AA9 /* TestUITests.m in Sources */,
+				745695231E9B550C00A5AA02 /* ViewController2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,9 +437,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 66KJFKBM3F;
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pthk.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -441,9 +451,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 66KJFKBM3F;
 				INFOPLIST_FILE = Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pthk.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -516,6 +528,7 @@
 				749DE54A1E98D56500821AA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		749DE54B1E98D56500821AA9 /* Build configuration list for PBXNativeTarget "TestTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +537,7 @@
 				749DE54D1E98D56500821AA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		749DE54E1E98D56500821AA9 /* Build configuration list for PBXNativeTarget "TestUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +546,7 @@
 				749DE5501E98D56500821AA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
