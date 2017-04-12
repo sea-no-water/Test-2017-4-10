@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import "ViewController2.h"
+#import "MasonryViewController.h"
 
 @interface ViewController ()
+@property (nonatomic, strong)UIButton * masonryBTn; //进入masonry的界面按钮
+
 
 @end
 
@@ -98,6 +101,42 @@
     //更改按钮上的字体大小
     zcBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     
+    [self masonryBtn];
+}
+
+#pragma mark 懒加载
+- (UIButton * ) masonryBtn
+{
+    if (!_masonryBTn) {
+        _masonryBTn= [[UIButton alloc] init];
+        _masonryBTn.backgroundColor = [UIColor redColor];
+        _masonryBTn.frame = CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 30);
+        [_masonryBTn setTitle:@"Masonry约束" forState:UIControlStateNormal];
+        [_masonryBTn addTarget:self action:@selector(masonryBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_masonryBTn];
+        
+    }
+    
+    NSLog(@"....");
+    return _masonryBTn;
+}
+
+
+- (void)setMasonryBTn:(UIButton *)masonryBTn
+{
+    NSLog(@"点击进入Masonry界面");
+    _masonryBTn = masonryBTn;
+    
+}
+
+
+- (void)masonryBtnClick:(UIButton * )Btn
+{
+    
+    NSLog(@"点击进入Masonry界面");
+    UIWindow * window = [UIApplication sharedApplication].delegate.window;
+    MasonryViewController * masonryVC = [[MasonryViewController alloc] init];
+    window.rootViewController = masonryVC;
     
 }
 
@@ -106,7 +145,7 @@
     NSLog(@"登录");
     
 }
-
+//注册按钮方法
 - (void)zcBtnClick:(UIButton *)zcBtn{
     
     UIWindow * window = [UIApplication sharedApplication].keyWindow;
@@ -115,7 +154,7 @@
     
     
 }
-
+//点击屏幕方法
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];

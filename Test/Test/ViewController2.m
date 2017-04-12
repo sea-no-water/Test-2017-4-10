@@ -134,7 +134,7 @@
 {
     NSLog(@"返回");
     UIWindow * window = [UIApplication sharedApplication].keyWindow;
-    UIViewController  * vc = [[UIViewController alloc] init];
+    ViewController  * vc = [[ViewController alloc] init];
     //设置跳转动画
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:1];
