@@ -11,15 +11,16 @@
 
 #import "MasonryViewController.h"
 #import "Masonry.h"
-
+#import "MasonryKeyBoardViewController.h"
 @interface MasonryViewController ()
 
+@property (nonatomic, strong)UILabel        * header;
+//登录Method
 @property (nonatomic, strong)UILabel        * ZHLabel;//账号label
 @property (nonatomic, strong)UILabel        * MMLabel;//密码label
 @property (nonatomic, strong)UITextField    * ZHText;//账号输入
 @property (nonatomic, strong)UITextField    * MMText;//密码输入
 @property (nonatomic, strong)UIButton       * DLBtn;//登录按钮
-
 
 @end
 
@@ -32,16 +33,16 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     
     
-    UILabel * header = [[UILabel alloc] init];
-    header.backgroundColor = [UIColor whiteColor];
-    header.text = @"Masonry约束";
-    header.textAlignment = NSTextAlignmentCenter;
-    header.font = [UIFont boldSystemFontOfSize:16];
-    header.textColor = [UIColor blackColor];
-    [self.view addSubview:header];
+    _header = [[UILabel alloc] init];
+    _header.backgroundColor = [UIColor whiteColor];
+    _header.text = @"Masonry约束";
+    _header.textAlignment = NSTextAlignmentCenter;
+    _header.font = [UIFont boldSystemFontOfSize:16];
+    _header.textColor = [UIColor blackColor];
+    [self.view addSubview:_header];
     
     //头条的约束
-    [header mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_header mas_makeConstraints:^(MASConstraintMaker *make) {
         //约束空间距离各个边距20
 //        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(20, 20, 20, 20));
         
@@ -51,22 +52,30 @@
         make.height.offset(44);
         
     }];
+    //登录的Method
+    [self DengLuMethod];
+   
     
+}
+
+//登录Method约束
+- (void)DengLuMethod
+{
     //账号label
     [self ZHLabel];
     [_ZHLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(header.bottom).offset(50);
+        make.top.equalTo(_header.bottom).offset(50);
         make.left.offset(20);
-//        make.right.equalTo(_ZHText.left).offset(10);//距离输入框10
+        //        make.right.equalTo(_ZHText.left).offset(10);//距离输入框10
         make.height.offset(40);
-    
+        
     }];
-
+    
     [self ZHText];
     [_ZHText mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(header.bottom).offset(50);
+        make.top.equalTo(_header.bottom).offset(50);
         make.right.equalTo(self.view).offset(-30);
         make.width.offset(self.view.bounds.size.width*4/6);//宽度为页面的4/5
         make.left.equalTo(_ZHLabel.right).offset(10);//距离输入label10
@@ -76,9 +85,9 @@
     }];
     
     //密码
-    [self MMLabel];
+     [self MMLabel];
     [_MMLabel makeConstraints:^(MASConstraintMaker *make) {
-       
+        
         make.left.offset(20);
         make.height.equalTo(_ZHLabel.height);
         make.top.equalTo(_ZHLabel.bottom).offset(20);
@@ -87,11 +96,13 @@
     
     [self MMText];
     [_MMText makeConstraints:^(MASConstraintMaker *make) {
+        
         make.right.offset(-30);
         make.left.equalTo(_MMLabel.right).offset(10);
         make.top.equalTo(_MMLabel.top);
         make.height.equalTo(_MMLabel.height);
         make.width.equalTo(_ZHText.width);
+        
     }];
     
     //登录按钮
@@ -102,15 +113,14 @@
         make.width.equalTo(_MMText.width);
         make.height.equalTo(_ZHLabel.height);
         make.top.equalTo(_MMText.bottom).offset(40);
-       
+        
     }];
+
     
-
-
 }
 
 #pragma mark 懒加载
-- (UILabel *)ZHLabel
+- (UILabel * )ZHLabel
 {
     if (!_ZHLabel) {
         UILabel * label = [[UILabel alloc] init];
@@ -210,14 +220,24 @@
 - (void)DLBtnClick:(UIButton * )DLBtn
 {
     NSLog(@"登录");
+    MasonryKeyBoardViewController * vc = [[MasonryKeyBoardViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:^{
+        
+        NSLog(@"进入模态页面");
+        
+    }];
+
+    
     
 }
+
 
 //点击屏幕
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
 //    [self.view endEditing:YES];
     [_ZHText resignFirstResponder];
+    
     
 }
 

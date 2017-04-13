@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		74387A831E9DBEAB00F66BE0 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74387A821E9DBEAB00F66BE0 /* MasonryViewController.m */; };
 		74387A841E9DBEAB00F66BE0 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74387A821E9DBEAB00F66BE0 /* MasonryViewController.m */; };
+		74387A871E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74387A861E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m */; };
+		74387A881E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74387A861E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m */; };
 		745695221E9B550C00A5AA02 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 745695211E9B550C00A5AA02 /* ViewController2.m */; };
 		745695231E9B550C00A5AA02 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 745695211E9B550C00A5AA02 /* ViewController2.m */; };
 		749DE5201E98D56300821AA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 749DE51F1E98D56300821AA9 /* main.m */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		74387A811E9DBEAB00F66BE0 /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		74387A821E9DBEAB00F66BE0 /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
+		74387A851E9F50CC00F66BE0 /* MasonryKeyBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryKeyBoardViewController.h; sourceTree = "<group>"; };
+		74387A861E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryKeyBoardViewController.m; sourceTree = "<group>"; };
 		745695201E9B550C00A5AA02 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		745695211E9B550C00A5AA02 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		749DE51B1E98D56200821AA9 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +117,8 @@
 			children = (
 				74387A811E9DBEAB00F66BE0 /* MasonryViewController.h */,
 				74387A821E9DBEAB00F66BE0 /* MasonryViewController.m */,
+				74387A851E9F50CC00F66BE0 /* MasonryKeyBoardViewController.h */,
+				74387A861E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m */,
 			);
 			name = "Masonry约束";
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 				74387A831E9DBEAB00F66BE0 /* MasonryViewController.m in Sources */,
 				749DE5261E98D56300821AA9 /* ViewController.m in Sources */,
 				745695221E9B550C00A5AA02 /* ViewController2.m in Sources */,
+				74387A871E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m in Sources */,
 				749DE5231E98D56300821AA9 /* AppDelegate.m in Sources */,
 				749DE5201E98D56300821AA9 /* main.m in Sources */,
 			);
@@ -394,6 +401,7 @@
 				749DE5441E98D56500821AA9 /* TestUITests.m in Sources */,
 				745695231E9B550C00A5AA02 /* ViewController2.m in Sources */,
 				74387A841E9DBEAB00F66BE0 /* MasonryViewController.m in Sources */,
+				74387A881E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
