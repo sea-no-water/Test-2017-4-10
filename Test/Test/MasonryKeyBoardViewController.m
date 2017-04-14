@@ -29,6 +29,9 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor grayColor];
+    //监听键盘的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    
     [self buttonConstrains];
     [self textConstrains];
     
@@ -61,7 +64,7 @@
 //        make.left.equalTo(_button.left);
 //        make.bottom.equalTo(_button.top).offset(-30);
         make.size.equalTo(CGSizeMake(200, 50));
-        make.centerY.equalTo(_button.centerY).offset(-80);
+        make.bottom.equalTo(_text.superview).offset(-60);
         make.centerX.equalTo(_button.centerX);
     }];
     
@@ -127,15 +130,69 @@
     
 }
 
+#pragma mark 键盘通知方法
+- (void)keyBoardWillShow:(NSNotification * )noti
+{
+    NSDictionary * userInfo = noti.userInfo;
+    CGRect rect = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    //获得rect的height
+    CGFloat keyboardHeight = CGRectGetHeight(rect);
+    //获得键盘动画duration
+    CGFloat keyboardDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [_text updateConstraints:^(MASConstraintMaker *make) {
+        
+        make.bottom.equalTo(-keyboardHeight);
+    }];
+   
+    //更新约束
+    [UIView animateWithDuration:keyboardDuration animations:^{
+         [self.view layoutIfNeeded];
+    
+    
+    }];
+    
+}
 
+- (void)keyBoardWillHide:(NSNotification * )noti
+{
+    NSDictionary * userInfo = noti.userInfo;
+    CGFloat keyboardDuration = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [_text updateConstraints:^(MASConstraintMaker *make) {
+        
+        make.bottom.equalTo(_text.superview).offset(-60);
+    }];
+    
+    //更新约束
+    [UIView animateWithDuration:keyboardDuration animations:^{
+        
+//        [_text layoutIfNeeded];
+        
+    }];
+    
+    
+    
+}
 
+//键盘协议
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    [_text resignFirstResponder];
+    
+    return YES;
+}
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+
     [_text resignFirstResponder];
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
