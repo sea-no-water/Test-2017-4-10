@@ -1,31 +1,32 @@
 //
-//  NextSc.m
+//  NextSC.m
 //  Test
 //
-//  Created by pthk on 2017/4/15.
+//  Created by pthk on 2017/4/17.
 //  Copyright © 2017年 pthk. All rights reserved.
 //
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 
-#import "NextSc.h"
+#import "NextSC.h"
 #import <Masonry.h>
 
-@interface NextSc ()
+@interface NextSC ()
 
 @end
 
-@implementation NextSc
+@implementation NextSC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor lightGrayColor];
-    
+    self.view.backgroundColor = [UIColor grayColor];
     [self creatNavigationBar];
+    [self creatScrollerView];
+    
+    [self backButton];
     
 }
-
 - (void)creatNavigationBar
 {
     CGRect rect = [UIScreen mainScreen].bounds;
@@ -46,23 +47,59 @@
     
     [bar setItems:[NSArray arrayWithObject:item]];
     
-
+    
 }
 
 - (void)creatScrollerView
 {
+    
     UIScrollView * sc = [[UIScrollView alloc] init];
-    sc.contentSize = CGSizeMake(0, 0);
+    sc.contentSize = CGSizeMake(0, 500);
+    sc.contentOffset = CGPointMake(0, 100);
     sc.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:sc];
     
     UIView * view = [[UIView alloc] init];
-    
     view.backgroundColor = [UIColor redColor];
-    [self.view addSubview:view];
+    [sc addSubview:view];
+    [view makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.offset(0);
+        make.left.offset(0);
+        make.width.equalTo(sc);
+        make.height.offset(200);
+    }];
     
+    [sc makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.edges.equalTo(UIEdgeInsetsMake(100, 0, 200, 0));
+        
+    }];
+
+}
+
+- (void)backButton
+{
+    UIButton * button = [[UIButton alloc] init];
+    button.backgroundColor = [UIColor blackColor];
+    [button setTitle:@"返回" forState:UIControlStateNormal];
+    [button addTarget:self
+               action:@selector(btnClick:)
+     forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
     
-    
+    [button makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.size.equalTo(CGSizeMake(80, 40));
+        make.bottom.equalTo(self.view).offset(-10);
+        make.centerX.equalTo(self.view);
+        
+    }];
+}
+
+- (void)btnClick:(UIButton * )btn
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

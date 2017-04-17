@@ -10,9 +10,10 @@
 #define MAS_SHORTHAND_GLOBALS//对于默认的约束参数自动装箱
 
 #import "MasonryViewController.h"
-#import "Masonry.h"
+#import <Masonry.h>
 #import "MasonryKeyBoardViewController.h"
 #import "ScrollerViewController.h"
+#import "LabelMasonry.h"
 @interface MasonryViewController ()
 
 @property (nonatomic, strong)UILabel        * header;
@@ -43,7 +44,7 @@
     [self.view addSubview:_header];
     
     //头条的约束
-    [_header mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_header makeConstraints:^(MASConstraintMaker *make) {
         //约束空间距离各个边距20
 //        make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(20, 20, 20, 20));
         
@@ -59,6 +60,7 @@
     //进入sc的masonry
     [self MasonrySCBtn];
     
+    
 }
 
 //登录Method约束
@@ -66,7 +68,7 @@
 {
     //账号label
     [self ZHLabel];
-    [_ZHLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_ZHLabel makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.equalTo(_header.bottom).offset(50);
         make.left.offset(20);
@@ -76,7 +78,7 @@
     }];
     
     [self ZHText];
-    [_ZHText mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_ZHText makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.equalTo(_header.bottom).offset(50);
         make.right.equalTo(self.view).offset(-30);
@@ -245,7 +247,7 @@
     
     [SCBtn setTitle:@"进入SC的Masonry的约束" forState:UIControlStateNormal];
     
-    [SCBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    [SCBtn makeConstraints:^(MASConstraintMaker *make) {
         
         make.centerX.equalTo(SCBtn.superview);
         make.bottom.offset(0);
@@ -262,6 +264,21 @@
     [self presentViewController:sc animated:YES completion:nil];
 }
 
+#pragma mark Label的包裹约束
+- (void)creatLabelMasonryBtn
+{
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor = [UIColor blueColor];
+    [button setTitle:@"进入label的Masonry" forState:UIControlStateNormal];
+    [self.view addSubview:button];
+    
+    [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)buttonClick:(UIButton * )btn
+{
+    
+}
 //点击屏幕
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
@@ -270,6 +287,7 @@
     
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -9,14 +9,18 @@
 /* Begin PBXBuildFile section */
 		740C6F921EA1BF540049F639 /* ScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 740C6F911EA1BF540049F639 /* ScrollerViewController.m */; };
 		740C6F931EA1C0460049F639 /* ScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 740C6F911EA1BF540049F639 /* ScrollerViewController.m */; };
-		740C6FD51EA20DDD0049F639 /* NextSc.m in Sources */ = {isa = PBXBuildFile; fileRef = 740C6FD41EA20DDD0049F639 /* NextSc.m */; };
-		740C6FD61EA20DDD0049F639 /* NextSc.m in Sources */ = {isa = PBXBuildFile; fileRef = 740C6FD41EA20DDD0049F639 /* NextSc.m */; };
 		74387A831E9DBEAB00F66BE0 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74387A821E9DBEAB00F66BE0 /* MasonryViewController.m */; };
 		74387A841E9DBEAB00F66BE0 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74387A821E9DBEAB00F66BE0 /* MasonryViewController.m */; };
 		74387A871E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74387A861E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m */; };
 		74387A881E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74387A861E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m */; };
 		745695221E9B550C00A5AA02 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 745695211E9B550C00A5AA02 /* ViewController2.m */; };
 		745695231E9B550C00A5AA02 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 745695211E9B550C00A5AA02 /* ViewController2.m */; };
+		747B6B191EA45AF600F531FE /* NextSC.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B6B181EA45AF600F531FE /* NextSC.m */; };
+		747B6B1A1EA45AF600F531FE /* NextSC.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B6B181EA45AF600F531FE /* NextSC.m */; };
+		747B6B221EA46DC000F531FE /* LabelMasonry.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B6B201EA46DC000F531FE /* LabelMasonry.m */; };
+		747B6B231EA46DC000F531FE /* LabelMasonry.m in Sources */ = {isa = PBXBuildFile; fileRef = 747B6B201EA46DC000F531FE /* LabelMasonry.m */; };
+		747B6B241EA46DC000F531FE /* LabelMasonry.xib in Resources */ = {isa = PBXBuildFile; fileRef = 747B6B211EA46DC000F531FE /* LabelMasonry.xib */; };
+		747B6B251EA46DC000F531FE /* LabelMasonry.xib in Resources */ = {isa = PBXBuildFile; fileRef = 747B6B211EA46DC000F531FE /* LabelMasonry.xib */; };
 		749DE5201E98D56300821AA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 749DE51F1E98D56300821AA9 /* main.m */; };
 		749DE5231E98D56300821AA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 749DE5221E98D56300821AA9 /* AppDelegate.m */; };
 		749DE5261E98D56300821AA9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749DE5251E98D56300821AA9 /* ViewController.m */; };
@@ -48,14 +52,17 @@
 /* Begin PBXFileReference section */
 		740C6F901EA1BF540049F639 /* ScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollerViewController.h; sourceTree = "<group>"; };
 		740C6F911EA1BF540049F639 /* ScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollerViewController.m; sourceTree = "<group>"; };
-		740C6FD31EA20DDD0049F639 /* NextSc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextSc.h; sourceTree = "<group>"; };
-		740C6FD41EA20DDD0049F639 /* NextSc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextSc.m; sourceTree = "<group>"; };
 		74387A811E9DBEAB00F66BE0 /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		74387A821E9DBEAB00F66BE0 /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		74387A851E9F50CC00F66BE0 /* MasonryKeyBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryKeyBoardViewController.h; sourceTree = "<group>"; };
 		74387A861E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryKeyBoardViewController.m; sourceTree = "<group>"; };
 		745695201E9B550C00A5AA02 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		745695211E9B550C00A5AA02 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		747B6B171EA45AF600F531FE /* NextSC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextSC.h; sourceTree = "<group>"; };
+		747B6B181EA45AF600F531FE /* NextSC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextSC.m; sourceTree = "<group>"; };
+		747B6B1F1EA46DC000F531FE /* LabelMasonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelMasonry.h; sourceTree = "<group>"; };
+		747B6B201EA46DC000F531FE /* LabelMasonry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelMasonry.m; sourceTree = "<group>"; };
+		747B6B211EA46DC000F531FE /* LabelMasonry.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelMasonry.xib; sourceTree = "<group>"; };
 		749DE51B1E98D56200821AA9 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		749DE51F1E98D56300821AA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		749DE5211E98D56300821AA9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,12 +139,15 @@
 			children = (
 				74387A811E9DBEAB00F66BE0 /* MasonryViewController.h */,
 				74387A821E9DBEAB00F66BE0 /* MasonryViewController.m */,
+				747B6B1F1EA46DC000F531FE /* LabelMasonry.h */,
+				747B6B201EA46DC000F531FE /* LabelMasonry.m */,
+				747B6B211EA46DC000F531FE /* LabelMasonry.xib */,
 				74387A851E9F50CC00F66BE0 /* MasonryKeyBoardViewController.h */,
 				74387A861E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m */,
 				740C6F901EA1BF540049F639 /* ScrollerViewController.h */,
 				740C6F911EA1BF540049F639 /* ScrollerViewController.m */,
-				740C6FD31EA20DDD0049F639 /* NextSc.h */,
-				740C6FD41EA20DDD0049F639 /* NextSc.m */,
+				747B6B171EA45AF600F531FE /* NextSC.h */,
+				747B6B181EA45AF600F531FE /* NextSC.m */,
 			);
 			name = "Masonry约束";
 			sourceTree = "<group>";
@@ -324,6 +334,7 @@
 			files = (
 				749DE52E1E98D56400821AA9 /* LaunchScreen.storyboard in Resources */,
 				749DE52B1E98D56400821AA9 /* Assets.xcassets in Resources */,
+				747B6B241EA46DC000F531FE /* LabelMasonry.xib in Resources */,
 				749DE5291E98D56300821AA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747B6B251EA46DC000F531FE /* LabelMasonry.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,12 +409,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				740C6FD51EA20DDD0049F639 /* NextSc.m in Sources */,
+				747B6B191EA45AF600F531FE /* NextSC.m in Sources */,
 				74387A831E9DBEAB00F66BE0 /* MasonryViewController.m in Sources */,
 				749DE5261E98D56300821AA9 /* ViewController.m in Sources */,
 				745695221E9B550C00A5AA02 /* ViewController2.m in Sources */,
 				740C6F921EA1BF540049F639 /* ScrollerViewController.m in Sources */,
 				74387A871E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m in Sources */,
+				747B6B221EA46DC000F531FE /* LabelMasonry.m in Sources */,
 				749DE5231E98D56300821AA9 /* AppDelegate.m in Sources */,
 				749DE5201E98D56300821AA9 /* main.m in Sources */,
 			);
@@ -420,11 +433,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747B6B1A1EA45AF600F531FE /* NextSC.m in Sources */,
+				747B6B231EA46DC000F531FE /* LabelMasonry.m in Sources */,
 				740C6F931EA1C0460049F639 /* ScrollerViewController.m in Sources */,
 				749DE5441E98D56500821AA9 /* TestUITests.m in Sources */,
 				745695231E9B550C00A5AA02 /* ViewController2.m in Sources */,
 				74387A841E9DBEAB00F66BE0 /* MasonryViewController.m in Sources */,
-				740C6FD61EA20DDD0049F639 /* NextSc.m in Sources */,
 				74387A881E9F50CC00F66BE0 /* MasonryKeyBoardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

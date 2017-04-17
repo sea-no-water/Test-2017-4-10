@@ -34,7 +34,7 @@
     
     [self buttonConstrains];
     [self textConstrains];
-    
+    [self backButton];
     
 }
 #pragma mark 约束
@@ -193,7 +193,29 @@
     
 }
 
+- (void)backButton
+{
+    UIButton * button = [[UIButton alloc] init];
+    button.backgroundColor = [UIColor blackColor];
+    [button setTitle:@"返回" forState:UIControlStateNormal];
+    [button addTarget:self
+               action:@selector(backBtnClick:)
+     forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
+    [button makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.size.equalTo(CGSizeMake(80, 40));
+        make.top.equalTo(self.view).offset(20);
+        make.left.equalTo(self.view);
+        
+    }];
+}
 
+- (void)backBtnClick:(UIButton * )btn
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
