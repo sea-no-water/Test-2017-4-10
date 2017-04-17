@@ -12,6 +12,7 @@
 #import "MasonryViewController.h"
 #import "Masonry.h"
 #import "MasonryKeyBoardViewController.h"
+#import "ScrollerViewController.h"
 @interface MasonryViewController ()
 
 @property (nonatomic, strong)UILabel        * header;
@@ -55,6 +56,8 @@
     //登录的Method
     [self DengLuMethod];
    
+    //进入sc的masonry
+    [self MasonrySCBtn];
     
 }
 
@@ -231,6 +234,33 @@
     
 }
 
+#pragma markscollerView的Masonry的约束
+- (void)MasonrySCBtn
+{
+    UIButton * SCBtn = [[UIButton alloc] init];
+    SCBtn.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:SCBtn];
+    
+    [SCBtn addTarget:self action:@selector(SCBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [SCBtn setTitle:@"进入SC的Masonry的约束" forState:UIControlStateNormal];
+    
+    [SCBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerX.equalTo(SCBtn.superview);
+        make.bottom.offset(0);
+        make.size.equalTo(CGSizeMake(self.view.frame.size.width, 40));
+        
+    }];
+    
+    
+    
+}
+- (void)SCBtnClick:(UIButton * )btn
+{
+    ScrollerViewController * sc = [[ScrollerViewController alloc] init];
+    [self presentViewController:sc animated:YES completion:nil];
+}
 
 //点击屏幕
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

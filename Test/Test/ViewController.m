@@ -5,10 +5,13 @@
 //  Created by pthk on 2017/4/8.
 //  Copyright © 2017年 pthk. All rights reserved.
 //
-
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import "ScrollerViewController.h"
 #import "ViewController.h"
-#import "ViewController2.h"
+
 #import "MasonryViewController.h"
+#import "Masonry.h"
 
 @interface ViewController ()
 @property (nonatomic, strong)UIButton * masonryBTn; //进入masonry的界面按钮
@@ -102,6 +105,10 @@
     zcBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     
     [self masonryBtn];
+    
+   
+    
+
 }
 
 #pragma mark 懒加载
@@ -154,6 +161,9 @@
     
     
 }
+
+
+
 //点击屏幕方法
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {

@@ -6,11 +6,17 @@
 //  Copyright © 2017年 pthk. All rights reserved.
 //
 
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+
 #import "ViewController2.h"
 #import "ViewController.h"
+#import "ScrollerViewController.h"
+#import "Masonry.h"
 
 @interface ViewController2 ()
 
+@property (nonatomic, strong)UIButton * MasonrySC;//scollerView的Masonry的约束
 @end
 
 @implementation ViewController2
@@ -96,6 +102,9 @@
     [FH setTitleColor:[UIColor orangeColor] forState:UIControlStateSelected];
     [FH addTarget:self action:@selector(FHBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     
+    //进入sc的masonry的约束
+//    [self MasonrySCBtn];
+    
 }
 
 //创建导航条方法
@@ -128,6 +137,8 @@
     window.rootViewController = vc;
     
 }
+
+
 
 //返回按钮方法
 - (void)FHBtnClick:(UIButton * )FHBtn
