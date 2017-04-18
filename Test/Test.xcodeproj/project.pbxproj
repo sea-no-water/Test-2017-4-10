@@ -79,6 +79,7 @@
 		749DE53F1E98D56500821AA9 /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		749DE5431E98D56500821AA9 /* TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUITests.m; sourceTree = "<group>"; };
 		749DE5451E98D56500821AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81EFCADC1EA5BCAF0007F23B /* Text.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Text.pch; sourceTree = "<group>"; };
 		A251DAE5CEA6A31045907264 /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 		E56201401D1975E2809B607C /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
 		F91B03426F47C4A5858477C5 /* libPods-Test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +149,7 @@
 				740C6F911EA1BF540049F639 /* ScrollerViewController.m */,
 				747B6B171EA45AF600F531FE /* NextSC.h */,
 				747B6B181EA45AF600F531FE /* NextSC.m */,
+				81EFCADC1EA5BCAF0007F23B /* Text.pch */,
 			);
 			name = "Masonry约束";
 			sourceTree = "<group>";
@@ -581,6 +583,7 @@
 				DEVELOPMENT_TEAM = 66KJFKBM3F;
 				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = Test/Text.pch;
 				INFOPLIST_FILE = Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -599,6 +602,7 @@
 				DEVELOPMENT_TEAM = 66KJFKBM3F;
 				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = Test/Text.pch;
 				INFOPLIST_FILE = Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

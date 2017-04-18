@@ -60,7 +60,9 @@
     //进入sc的masonry
     [self MasonrySCBtn];
     
-    
+    //进入label的Masonry
+    [self creatLabelMasonryBtn];
+
 }
 
 //登录Method约束
@@ -273,11 +275,20 @@
     [self.view addSubview:button];
     
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [button makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.bottom.equalTo(self.view).offset(-40);
+        make.width.equalTo(self.view);
+        make.height.offset(40);
+        
+    }];
 }
 
 - (void)buttonClick:(UIButton * )btn
 {
-    
+    LabelMasonry * labMas = [[LabelMasonry alloc] init];
+    [self presentViewController:labMas animated:YES completion:nil];
 }
 //点击屏幕
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

@@ -1,0 +1,38 @@
+//
+//  Text.pch
+//  Test
+//
+//  Created by Haven on 2017/4/18.
+//  Copyright © 2017年 pthk. All rights reserved.
+//
+
+/*
+ pch文件作用：
+    1.存入一些公有的宏
+    2.导入公用的头文件
+    3.自定义log
+ 
+ 原理：工程在编译过程中，把pch文件当中的所有的内容导入到工程中的所有文件
+ 
+ */
+
+#ifdef __OBJC__ //在混编时，防止pch文件中oc的文件导入到其他语言的文件中
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import <Masonry.h>
+
+#define ScreenW [UIScreen mainScreen].bounds.size.width //公用的宏
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+
+#ifdef DEBUG //如果是调试阶段 LOG代替NSLog
+
+#define LOG(...) NSLog(__VA_ARGS__) //...:宏里的可变参数  __VA_ARGS__：oc的可变参数
+
+#else //如果是发布阶段 LOG为空
+
+#define LOG(...)
+
+#endif
+
+#endif
