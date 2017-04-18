@@ -48,7 +48,7 @@
     DLZHtf.placeholder = @"请输入账号";
     DLZHtf.alpha = 0.5;
     DLZHtf.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
-    //设置返回键为“join”
+    //设置返回键为join 系统键盘
     DLZHtf.returnKeyType = UIReturnKeyJoin;
     
     //密码
